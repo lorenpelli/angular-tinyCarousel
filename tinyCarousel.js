@@ -7,7 +7,7 @@
         .directive('tinyCarousel', ['$timeout', '$raf', function ($timeout, $raf) {
 
             return {
-                templateUrl: 'tinycarousel.html',
+                templateUrl: 'tinyCarousel.html',
                 restrict: 'A',
 
                 scope: {
