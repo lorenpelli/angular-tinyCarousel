@@ -1,5 +1,5 @@
-<div class="buttons prev" ng-click="move(slideIndex - 1)"></div>
-<div class="buttons next" ng-click="move(slideIndex + 1)"></div>
+<div class="buttons prev" ng-click="move(slideIndex - 1)" ng-show="carouselItems.length > slidesVisible"></div>
+<div class="buttons next" ng-click="move(slideIndex + 1)" ng-show="carouselItems.length > slidesVisible"></div>
 <div class="viewport">
     <ul class="overview">
 
