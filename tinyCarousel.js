@@ -59,7 +59,8 @@
 
                     start = function () {
 
-                        if (scope.options.interval) {
+                        // Set timer only if auto-sliding requested and items count greater than visible area
+                        if (scope.options.interval && scope.slidesVisible < scope.carouselItems.length) {
 
                             clearTimeout(intervalTimer);
 
@@ -118,7 +119,10 @@
                         scope.slideCurrent = scope.options.start || 0;
                         scope.slidesVisible = Math.ceil((viewportSize + viewportOffset) / scope.slideSize);
                         
-                        scope.carouselItemsMirrored = scope.carouselItems.slice(0, scope.slidesVisible);
+                        if (scope.slidesVisible < scope.carouselItems.length) {
+                        
+                            scope.carouselItemsMirrored = scope.carouselItems.slice(0, scope.slidesVisible);
+                        }
 
                         $raf(function () {
                             $overview.css(scope.sizeLabel.toLowerCase(), scope.slideSize * (scope.carouselItems.length + scope.slidesVisible));
