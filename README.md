@@ -7,6 +7,6 @@ This module built with idea of reducing DOM manipulation through jQuery and usin
 
 # Demo
 
-You can see the demo [here](http://yborunov.github.io/angular-tinyCarousel).
+You can see the demo [here](http://yborunov.github.io/angular-tinyCarousel/example/).
 
 Or clone the repo and run the index.html file.
