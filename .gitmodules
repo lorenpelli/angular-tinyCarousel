@@ -1,0 +1,6 @@
+[submodule "exmple"]
+	path = exmple
+	url = git@github.com:yborunov/angular-tinyCarousel.git
+[submodule "example"]
+	path = example
+	url = git@github.com:yborunov/angular-tinyCarousel.git
