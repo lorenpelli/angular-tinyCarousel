@@ -44,7 +44,7 @@
                     template: '<img ng-src="images/{{item}}">'
                 },
                 'Carousel2': {
-                    items: 'items3',
+                    items: 'items2',
                     template: '<img ng-src="images/{{item}}">'
                 },
                 'Carousel3': {
