@@ -5,3 +5,8 @@ The idea of the module originally came from jQuery tinyCarousel plugin implement
 although can't be used in Angular projects due to different concepts confrontation between jQuery and Angular. 
 This module built with idea of reducing DOM manipulation through jQuery and using Angular binding declarative programming approach instead.
 
+# Demo
+
+You can see the demo [here](http://yborunov.github.io/angular-tinyCarousel).
+
+Or clone the repo and run the index.html file.
