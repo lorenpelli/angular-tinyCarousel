@@ -7,7 +7,19 @@
         .directive('tinyCarousel', ['$timeout', '$raf', function ($timeout, $raf) {
 
             return {
-                templateUrl: 'tinyCarousel.html',
+                template: '<div class="buttons prev" ng-click="move(slideIndex - 1)" ng-show="carouselItems.length > slidesVisible"></div>' +
+                    '<div class="buttons next" ng-click="move(slideIndex + 1)" ng-show="carouselItems.length > slidesVisible"></div>' +
+                    '<div class="viewport">' +
+                    '    <ul class="overview">' +
+                    '        <li ng-repeat="item in carouselItems" compile="carouselTemplate" ng-click="itemClickDisabled || carouselItemClicked(item)"' +
+                    '            ng-class="{\'left\': (slideIndex == $index), \'center\':  ((slideIndex + 1) == $index), \'right\': ((slideIndex + 2) == $index)}">' +
+                    '        </li>' +
+                    '        <li ng-repeat="item in carouselItemsMirrored" compile="carouselTemplate" ng-click="carouselItemClicked(item)"' +
+                    '            ng-class="{\'left\': (slideIndex == (carouselItems.length + $index)), \'center\':  ((slideIndex + 1) == (carouselItems.length + $index)), \'right\': ((slideIndex + 2) == (carouselItems.length + $index))}">' +
+                    '        </li>' +
+                    '    </ul>' +
+                    '</div>',
+
                 restrict: 'A',
 
                 scope: {
@@ -89,12 +101,12 @@
                         $timeout(function () {
 
                             scope.carouselItemsMirrored = [];
-                            
+
                             scope.$broadcast('tinyCarousel:update');
 
                             scope.move(0);
                         }, 1000);
-                    }
+                    };
 
                     scope.$watch(function () {
                         return scope.carouselItems;
@@ -118,15 +130,15 @@
                         scope.slideSize = scope.sizeLabel === "Width" ? $slides.first().outerWidth(true) : $slides.first().outerHeight(true);
                         scope.slideCurrent = scope.options.start || 0;
                         scope.slidesVisible = Math.ceil((viewportSize + viewportOffset) / scope.slideSize);
-                        
+
                         if (scope.slidesVisible < scope.carouselItems.length) {
-                        
+
                             scope.carouselItemsMirrored = scope.carouselItems.slice(0, scope.slidesVisible);
                         }
 
                         $raf(function () {
                             $overview.css(scope.sizeLabel.toLowerCase(), scope.slideSize * (scope.carouselItems.length + scope.slidesVisible));
-                            
+
                             if (scope.sizeLabel === 'Width') {
                                 $viewport.css('height', $slides.first().outerHeight(true));
                             } else {
@@ -202,7 +214,7 @@
                             scope.carouselItems = scope.$parent[carouselData.items];
 
                             update();
-                            
+
                             scope.$watch(function () {
                                 return scope.$parent[carouselData.items];
                             }, function (newVal) {
@@ -229,10 +241,10 @@
                     };
             }());
         })
-        
+
         .directive('compile', ['$compile', function ($compile) {
             return function (scope, element, attrs) {
-                
+
                 scope.$watch(function (scope) {
                     // watch the 'compile' expression for changes
                     return scope.$eval(attrs.compile);
