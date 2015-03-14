@@ -17,6 +17,10 @@
     "angularjs",
     "carousel"
   ],
+  "ignore": [
+    "tinyCarousel.less",
+    "demo/*"
+  ],
   "dependencies": {
       "jquery": "latest"
   },
