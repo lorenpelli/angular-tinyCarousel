@@ -5,8 +5,18 @@ The idea of the module originally came from jQuery tinyCarousel plugin implement
 although can't be used in Angular projects due to different concepts confrontation between jQuery and Angular. 
 This module built with idea of reducing DOM manipulation through jQuery and using Angular binding declarative programming approach instead.
 
-# Demo
+## Demo
 
 You can see the demo [here](http://yborunov.github.io/angular-tinyCarousel/repo/demo/).
 
 Or clone the repo and run the index.html file.
+
+## Installing
+
+### Installing via Bower
+
+``
+bower install angular-tinycarousel
+``
+
+Then you just need to link tinyCarousel.js and tinyCarousel.min.css files to your project.
