@@ -1,0 +1,35 @@
+{
+  "name": "angular-tinyCarousel",
+  "version": "1.0.1",
+  "homepage": "https://github.com/yborunov/angular-tinyCarousel",
+  "description": "AngularJS TinyCarousel module, implementation of jQuery tinyCarousel plugin in Angular way",
+  "main": [
+    "tinyCarousel.js", 
+    "tinyCarousel.min.css"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "carousel",
+    "tinycarousel",
+    "angular",
+    "carousel",
+    "angular",
+    "tinycarousel",
+    "angularjs",
+    "carousel"
+  ],
+  "ignore": [
+    "tinyCarousel.less",
+    "demo"
+  ],
+  "dependencies": {
+      "angular": ">=1.3.14",
+      "jquery": ">=1.11.12"
+  },
+  "authors": [
+    "Yuri Borunov <yuri@borunov.com>"
+  ],
+  "license": "MIT"
+}
