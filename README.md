@@ -9,14 +9,14 @@ This module built with idea of reducing DOM manipulation through jQuery and usin
 
 You can see the demo [here](http://yborunov.github.io/angular-tinyCarousel/repo/demo/).
 
-Or clone the repo and run the index.html file.
+Or clone the repo and run the demo/index.html file.
 
 ## Installing
 
 ### Installing via Bower
 
-``
+```
 bower install angular-tinycarousel
-``
+```
 
-Then you just need to link tinyCarousel.js and tinyCarousel.min.css files to your project.
+Then you just need to link `tinyCarousel.js` and `tinyCarousel.min.css` files to your project.
