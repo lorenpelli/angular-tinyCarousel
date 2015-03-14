@@ -102,7 +102,7 @@ Link those files to your html page and create controller and DIV-element with `t
 
 You can follow the process described above, if you have any concerns.
 
-## Author and supports
+## Author and support
 
 Angular tinyCarousel module created by Yuri Borunov <yuri@borunov.com>
 
