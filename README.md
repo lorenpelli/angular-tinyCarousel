@@ -11,6 +11,30 @@ You can see the demo [here](http://yborunov.github.io/angular-tinyCarousel/repo/
 
 Or clone the repo and run the demo/index.html file.
 
+### Example of html element
+
+```
+<div class="tinycarousel" tiny-carousel="Carousel" tiny-carousel-interval="true"></div>
+```
+
+### Configuring in Controller
+
+```
+	$scope.items = [
+	    'picture1.jpg',
+	    'picture2.jpg',
+	    'picture3.jpg',
+	];
+
+	$scope.tinyCarousels = {
+
+	    'Carousel': {
+	        items: 'items',
+	        template: '<img ng-src="images/{{item}}">'
+	    }
+	}
+```
+
 ## Installing
 
 ### Installing via Bower
