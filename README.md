@@ -19,14 +19,14 @@ Also you can clone the repo and run the `demo/index.html` file.
 
 2. Add style file
 
-+ Find and copy `tinyCarousel.min.css` into your styles folder.
-+ Add following code in your html page:
+	+ Find and copy `tinyCarousel.min.css` into your styles folder.
+	+ Add following code in your html page:
 
-```
-	<link rel="stylesheet" type="text/css" href="<Path to style folder>/tinyCarousel.min.css" />
-```
+	```
+		<link rel="stylesheet" type="text/css" href="<Path to style folder>/tinyCarousel.min.css" />
+	```
 
-+ Replace `<Path to style folder>` with your real style folder path
+	+ Replace `<Path to style folder>` with your real style folder path
 
 3. Add Angular and JQuery libraries
 
