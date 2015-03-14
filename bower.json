@@ -3,7 +3,10 @@
   "version": "1.0.1",
   "homepage": "https://github.com/yborunov/angular-tinyCarousel",
   "description": "AngularJS TinyCarousel module, implementation of jQuery tinyCarousel plugin in Angular way",
-  "main": ["tinyCarousel.html", "tinyCarousel.js", "tinyCarousel.min.css"],
+  "main": [
+    "tinyCarousel.js", 
+    "tinyCarousel.min.css"
+  ],
   "moduleType": [
     "globals"
   ],
