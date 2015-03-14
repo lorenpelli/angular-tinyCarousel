@@ -53,7 +53,7 @@ Also you can clone the repo and run the `demo/index.html` file.
 
 5. Create Angular Controller
 
-	You can insert following code after all libraries:
+	You can use following code after all libraries to create controller:
 
 	```
 	<script>
@@ -96,4 +96,14 @@ Also you can clone the repo and run the `demo/index.html` file.
 bower install angular-tinycarousel
 ```
 
-Then you just need to link `tinyCarousel.js` and `tinyCarousel.min.css` files to your project.
+Then you can find `tinyCarousel.js` and `tinyCarousel.min.css` in your bower's components directory.
+
+Link those files to your html page and create controller and DIV-element with `tiny-carousel` directive inside that controller.
+
+You can follow the process described above, if you have any concerns.
+
+## Author and supports
+
+Angular tinyCarousel module created by Yuri Borunov <yuri@borunov.com>
+
+If you have any troubles using this module, just let me know through [Issues](https://github.com/yborunov/angular-tinyCarousel/issues) and I'll do my best to fix the problem as soos as possible.
