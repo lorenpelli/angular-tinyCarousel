@@ -106,4 +106,4 @@ You can follow the process described above, if you have any concerns.
 
 Angular tinyCarousel module created by Yuri Borunov <yuri@borunov.com>
 
-If you have any troubles using this module, just let me know through [Issues](https://github.com/yborunov/angular-tinyCarousel/issues) and I'll do my best to fix the problem as soos as possible.
+If you have any troubles using this module, just let me know through [Issues](https://github.com/yborunov/angular-tinyCarousel/issues) and I'll do my best to fix the problem as soon as possible.
