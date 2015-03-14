@@ -30,64 +30,64 @@ Also you can clone the repo and run the `demo/index.html` file.
 
 3. Add Angular and JQuery libraries
 
-_(for instance from CDN)_
+	_(for instance from CDN)_
 
-At the bottom of the html page add following:
+	At the bottom of the html page add following:
 
-```
-	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-```
+	```
+		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	```
 
 4. Add angular-tinyCarousel module JS file 
 
-+ Find and copy `tinyCarousel.js` into your scripts folder.
-+ Add following code at the bottom of your html page (after Angular and jQuery):
+	+ Find and copy `tinyCarousel.js` into your scripts folder.
+	+ Add following code at the bottom of your html page (after Angular and jQuery):
 
-```
-	<script src="<Path to scripts folder>/tinyCarousel.js"></script>
-```
+	```
+		<script src="<Path to scripts folder>/tinyCarousel.js"></script>
+	```
 
-+ Replace `<Path to scripts folder>` with your real scripts folder path
+	+ Replace `<Path to scripts folder>` with your real scripts folder path
 
 
 5. Create Angular Controller
 
-You can insert following code after all libraries:
+	You can insert following code after all libraries:
 
-```
-<script>
-(function () {
-    'use strict';
+	```
+	<script>
+	(function () {
+	    'use strict';
 
-    angular.module('app', ['tinyCarousel'])
-        .controller('mainCtrl', ['$scope', function ($scope) {
-		
-		$scope.items = [
-		    'picture1.jpg',
-		    'picture2.jpg',
-		    'picture3.jpg',
-		];
+	    angular.module('app', ['tinyCarousel'])
+	        .controller('mainCtrl', ['$scope', function ($scope) {
+			
+			$scope.items = [
+			    'picture1.jpg',
+			    'picture2.jpg',
+			    'picture3.jpg',
+			];
 
-		$scope.tinyCarousels = {
+			$scope.tinyCarousels = {
 
-		    'Carousel': {
-		        items: 'items',
-		        template: '<img ng-src="images/{{item}}">'
-		    }
-		}
-	}]);
-}());
-</script>
-```
+			    'Carousel': {
+			        items: 'items',
+			        template: '<img ng-src="images/{{item}}">'
+			    }
+			}
+		}]);
+	}());
+	</script>
+	```
 
 6. HTML code for adding angular-tinyCarousel
 
-```
-	<div ng-controller="mainCtrl">
-		<div class="tinycarousel" tiny-carousel="Carousel"></div>
-	</div>
-```
+	```
+		<div ng-controller="mainCtrl">
+			<div class="tinycarousel" tiny-carousel="Carousel"></div>
+		</div>
+	```
 
 
 ### Installing via Bower
