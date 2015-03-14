@@ -19,7 +19,7 @@
   ],
   "ignore": [
     "tinyCarousel.less",
-    "demo/*"
+    "demo"
   ],
   "dependencies": {
       "jquery": "latest"
