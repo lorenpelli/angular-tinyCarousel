@@ -1,68 +1,158 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Angular TinyCarousel : Implementation of tinyCarousel jQuery plugin for AngularJS">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-    <title>Angular TinyCarousel</title>
+    <title>Angular TinyCarousel by yborunov</title>
   </head>
 
   <body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/yborunov/angular-tinyCarousel">View on GitHub</a>
+    <header>
+      <div class="container">
+        <h1>Angular TinyCarousel</h1>
+        <h2>Implementation of tinyCarousel jQuery plugin for AngularJS</h2>
 
-          <h1 id="project_title">Angular TinyCarousel</h1>
-          <h2 id="project_tagline">Implementation of tinyCarousel jQuery plugin for AngularJS</h2>
+        <section id="downloads">
+          <a href="https://github.com/yborunov/angular-tinyCarousel/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/yborunov/angular-tinyCarousel/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/yborunov/angular-tinyCarousel" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/yborunov/angular-tinyCarousel/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/yborunov/angular-tinyCarousel/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="angular-tinycarousel" class="anchor" href="#angular-tinycarousel" aria-hidden="true"><span class="octicon octicon-link"></span></a>angular-tinyCarousel</h1>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a id="module-description" class="anchor" href="#module-description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Module Description</h3>
+<p>AngularJS TinyCarousel is a really simple carousel for web apps, written in Angular best approaches way. 
+The idea of the module originally came from jQuery tinyCarousel plugin implementation, which is really cool, 
+although can't be used in Angular projects due to different concepts confrontation between jQuery and Angular. 
+This module built with idea of reducing DOM manipulation through jQuery and using Angular declarative coding approach instead.</p>
 
-<p>AngularJS TinyCarousel is a really simple carousel for web apps, written in Angular best approaches way.
-Originally, idea of the module came from jQuery tinyCarousel plugin implementation, that is really cool, however can't be used in Angular projects due to different concepts confrontation between jQuery and Angular. This module built with idea of reducing DOM manipulation through jQuery and using Angular binding declarative programming approach instead. </p>
+<h2>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo</h2>
+
+<p>The demo is available <a href="http://yborunov.github.io/angular-tinyCarousel/repo/demo/">here</a>.</p>
+
+<p>Also you can clone the repo and run the <code>demo/index.html</code> file.</p>
+
+<h2>
+<a id="installing" class="anchor" href="#installing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installing</h2>
 
 <h3>
-<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h3>
+<a id="regular-way" class="anchor" href="#regular-way" aria-hidden="true"><span class="octicon octicon-link"></span></a>Regular way</h3>
 
-<p>You can observe example of this module in action <a href="repo/demo/">here</a>.</p>
+<ol>
+<li><p>Clone or download the repository to your local machine.</p></li>
+<li>
+<p>Add style file</p>
+
+<ul>
+<li>Find and copy <code>tinyCarousel.min.css</code> into your styles folder.</li>
+<li>Add following code in your html page:</li>
+</ul>
+
+<pre><code>    &lt;link rel="stylesheet" type="text/css" href="&lt;Path to style folder&gt;/tinyCarousel.min.css" /&gt;
+</code></pre>
+
+<ul>
+<li>Replace <code>&lt;Path to style folder&gt;</code> with your real style folder path</li>
+</ul>
+</li>
+<li>
+<p>Add Angular and JQuery libraries</p>
+
+<p><em>(for instance from CDN)</em></p>
+
+<p>At the bottom of the html page add following:</p>
+
+<pre><code>    &lt;script src="https://code.jquery.com/jquery-2.1.3.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"&gt;&lt;/script&gt;
+</code></pre>
+</li>
+<li>
+<p>Add angular-tinyCarousel module JS file </p>
+
+<ul>
+<li>Find and copy <code>tinyCarousel.js</code> into your scripts folder.</li>
+<li>Add following code at the bottom of your html page (after Angular and jQuery):</li>
+</ul>
+
+<pre><code>    &lt;script src="&lt;Path to scripts folder&gt;/tinyCarousel.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<ul>
+<li>Replace <code>&lt;Path to scripts folder&gt;</code> with your real scripts folder path</li>
+</ul>
+</li>
+<li>
+<p>Create Angular Controller</p>
+
+<p>You can use following code after all libraries to create controller:</p>
+
+<pre><code>&lt;script&gt;
+(function () {
+    'use strict';
+
+    angular.module('app', ['tinyCarousel'])
+        .controller('mainCtrl', ['$scope', function ($scope) {
+
+        $scope.items = [
+            'picture1.jpg',
+            'picture2.jpg',
+            'picture3.jpg',
+        ];
+
+        $scope.tinyCarousels = {
+
+            'Carousel': {
+                items: 'items',
+                template: '&lt;img ng-src="images/{{item}}"&gt;'
+            }
+        }
+    }]);
+}());
+&lt;/script&gt;
+</code></pre>
+</li>
+<li>
+<p>HTML code for adding angular-tinyCarousel</p>
+
+<pre><code>    &lt;div ng-controller="mainCtrl"&gt;
+        &lt;div class="tinycarousel" tiny-carousel="Carousel"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+</li>
+</ol>
 
 <h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<a id="installing-via-bower" class="anchor" href="#installing-via-bower" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installing via Bower</h3>
 
-<p>Author of this module is <a href="https://github.com/yborunov" class="user-mention">@yborunov</a>.</p>
+<pre><code>bower install angular-tinycarousel
+</code></pre>
 
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<p>Then you can find <code>tinyCarousel.js</code> and <code>tinyCarousel.min.css</code> in your bower's components directory.</p>
 
-<p>If you have any troubles using this module just let me know in <a href="https://github.com/yborunov/angular-tinyCarousel/issues">Issues</a>, and I try my best to fix it as soon as possible.</p>
+<p>Link those files to your html page and create controller and DIV-element with <code>tiny-carousel</code> directive inside that controller.</p>
+
+<p>You can follow the process described above, if you have any concerns.</p>
+
+<h2>
+<a id="author-and-support" class="anchor" href="#author-and-support" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author and support</h2>
+
+<p>Angular tinyCarousel module created by Yuri Borunov <a href="mailto:yuri@borunov.com">yuri@borunov.com</a></p>
+
+<p>If you have any troubles using this module, just let me know through <a href="https://github.com/yborunov/angular-tinyCarousel/issues">Issues</a> and I'll do my best to fix the problem as soon as possible.</p>
       </section>
     </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Angular TinyCarousel maintained by <a href="https://github.com/yborunov">yborunov</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
     
-
   </body>
 </html>
